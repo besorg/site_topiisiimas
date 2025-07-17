@@ -161,8 +161,6 @@ import Layout from '../layouts/Layout.astro';
       <img src="${r.cita}" alt="Reseña" />
     </div>
   `);
-
-
         document.getElementById('reviews-container').innerHTML = reviews.join('');
       }).catch(err => {
         console.error("Error cargando los datos:", err);
