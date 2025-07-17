@@ -29,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="reviews" id="reviews">
     <h2>Lo que dicen nuestros clientes</h2>
-    <div id="reviews-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;"></div>
+    <div id="reviews-container" class="review-grid"></div>
   </section>
 
   <div id="burger-modal" class="modal hidden">
@@ -144,8 +144,8 @@ import Layout from '../layouts/Layout.astro';
         window.dynamicProducts = products;
 
         const list = document.getElementById('burger-list');
-        list.innerHTML = products.map((product, index) => `
-          <div class="burger-card" onclick="openModalFromList(${index})">
+        list.innerHTML = products.map((product) => `
+          <div class="burger-card">
             <img src="${product.imagen}" alt="${product.nombre}" />
             <h3>${product.nombre}</h3>
             <p>${product.descripcion}</p>
@@ -195,5 +195,12 @@ import Layout from '../layouts/Layout.astro';
       text-align: center;
       color: var(--text-color);
     }
-  </style>
+    .review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    margin-top: 1rem;
+  }
+</style>
 </Layout>
