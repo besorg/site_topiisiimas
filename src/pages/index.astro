@@ -155,13 +155,13 @@ import Layout from '../layouts/Layout.astro';
         `).join('');
 
         const reviews = reviewsRows
-          .filter(r => r.cita && r.autor)
-          .map(r => `
-            <div class="review-card">
-              <img src="${r.cita}" alt="${r.autor}" />
-              <p class="review-author">${r.autor}</p>
-            </div>
-          `);
+  .filter(r => r.cita)
+  .map(r => `
+    <div class="review-card">
+      <img src="${r.cita}" alt="Reseña" />
+    </div>
+  `);
+
 
         document.getElementById('reviews-container').innerHTML = reviews.join('');
       }).catch(err => {
