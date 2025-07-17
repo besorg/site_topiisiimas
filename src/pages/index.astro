@@ -29,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="reviews" id="reviews">
     <h2>Lo que dicen nuestros clientes</h2>
-    <div id="reviews-container"></div>
+    <div id="reviews-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;"></div>
   </section>
 
   <div id="burger-modal" class="modal hidden">
@@ -120,7 +120,6 @@ import Layout from '../layouts/Layout.astro';
         fetchCSV(urls.menu),
         fetchCSV(urls.reviews)
       ]).then(([menuRows, reviewsRows]) => {
-        // WhatsApp
         const whatsapp = '5491165565637';
         window.dynamicWhatsapp = whatsapp;
 
@@ -134,7 +133,6 @@ import Layout from '../layouts/Layout.astro';
           whatsappLink.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Estoy interesada en realizar un tratamiento capilar.")}`;
         }
 
-        // Productos
         const products = menuRows
           .filter(row => row.nombre && row.imagen)
           .map(row => ({
@@ -155,17 +153,47 @@ import Layout from '../layouts/Layout.astro';
           </div>
         `).join('');
 
-        /*
-        // Reseñas
+        // Galería de imágenes con reviews
         const reviews = reviewsRows
           .filter(r => r.cita && r.autor)
-          .map(r => `<div class="review"><p>“${r.cita.trim()}”</p><span>- ${r.autor.trim()}</span></div>`);
+          .map(r => `
+            <div class="review-card">
+              <img src="${r.cita}" alt="${r.autor}" />
+              <p class="review-author">${r.autor}</p>
+            </div>
+          `);
 
         document.getElementById('reviews-container').innerHTML = reviews.join('');
-*/
       }).catch(err => {
         console.error("Error cargando los datos:", err);
       });
     });
   </script>
+  <style>
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 0.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      max-width: 220px;
+    }
+
+    .review-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .review-author {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      text-align: center;
+      color: var(--text-color);
+    }
+  </style>
 </Layout>
