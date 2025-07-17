@@ -32,8 +32,8 @@ import Layout from '../layouts/Layout.astro';
     <div id="reviews-container" class="review-grid"></div>
   </section>
 
-  <section class="cta-reserva">
-    <p class="cta-message">¡Agendá tu turno hoy y sentite radiante con un estilo perfecto!</p>
+  <section class="cta-reserva cta-section">
+    <h3 class="cta-message">¡Agendá tu turno hoy y sentite radiante con un estilo perfecto!</h3>
     <a class="btn" href="https://wa.me/5491165565637?text=¡Hola! Quiero agendar un turno para un tratamiento capilar." target="_blank">Agendar por WhatsApp</a>
   </section>
 
@@ -85,17 +85,12 @@ import Layout from '../layouts/Layout.astro';
     </p>
   </footer>
 
-<script>
-  document.documentElement.classList.add('dark');
-</script>
+  <script>
+    document.documentElement.classList.add('dark');
+  </script>
 
-  <!-- PapaParse -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js" defer></script>
-
-  <!-- Modal logic -->
   <script src="/scripts/modal.js" defer></script>
-
-  <!-- Carga de datos -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       const baseId = '1LTrH4UlGmY94Q_hH5jxTjy-CwDTUoS8YBGrvytSILvM';
@@ -143,8 +138,7 @@ import Layout from '../layouts/Layout.astro';
           .map(row => ({
             nombre: row.nombre,
             descripcion: row.descripcion,
-            imagen: row.imagen,
-            precio: row.precio
+            imagen: row.imagen
           }));
         window.dynamicProducts = products;
 
@@ -173,53 +167,4 @@ import Layout from '../layouts/Layout.astro';
       });
     });
   </script>
-  <style>
-    .review-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 0.5rem;
-      margin: 0.5rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      width: 160px;
-      height: 220px;
-    }
-
-    .review-card img {
-      width: 140px;
-      height: 140px;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-
-    .review-author {
-      margin-top: 0.5rem;
-      font-weight: bold;
-      text-align: center;
-      color: var(--text-color);
-    }
-
-    .review-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      justify-items: center;
-      margin-top: 1rem;
-    }
-
-    .two-columns {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      justify-items: center;
-    }
-
-    .burger-card {
-      width: 100%;
-      max-width: 400px;
-    }
-  </style>
 </Layout>
