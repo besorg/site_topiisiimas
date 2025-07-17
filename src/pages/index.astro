@@ -62,12 +62,12 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="contact" id="contact">
     <h2>Contacto</h2>
-    <p>Contactanos por nuestras redes sociales o hacé tu pedido directamente.</p>
+    <p>Contactanos por nuestras redes sociales o reservá tu turno directamente.</p>
     <div class="contact-methods">
       <a href="https://instagram.com/Topiisiimas" target="_blank">
         <img src="/images/instagram-icon.png" alt="Instagram" class="icon" />
       </a>
-      <a href="https://wa.me/5491132776974?text=%C2%A1Hola!%20Estoy%20visitando%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20hacer%20un%20pedido." target="_blank">
+      <a id="wa-link" href="#" target="_blank">
         <img src="/images/whatsapp-icon.png" alt="WhatsApp" class="icon" />
       </a>
     </div>
@@ -124,10 +124,15 @@ import Layout from '../layouts/Layout.astro';
         const whatsapp = '5491165565637';
         window.dynamicWhatsapp = whatsapp;
 
-const whatsappButton = document.getElementById('whatsapp-button');
-if (whatsappButton && whatsapp) {
-  whatsappButton.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Estoy visitando su sitio web y me gustaría hacer un pedido.")}`;
-}
+        const whatsappButton = document.getElementById('whatsapp-button');
+        if (whatsappButton && whatsapp) {
+          whatsappButton.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Estoy interesada en realizar un tratamiento capilar.")}`;
+        }
+
+        const whatsappLink = document.getElementById('wa-link');
+        if (whatsappLink && whatsapp) {
+          whatsappLink.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Estoy interesada en realizar un tratamiento capilar.")}`;
+        }
 
         // Productos
         const products = menuRows
