@@ -177,6 +177,7 @@ img {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   justify-content: center;
+  justify-items: center;
 }
 
 .burger-card {
@@ -231,6 +232,7 @@ img {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   justify-content: center;
+  justify-items: center;
   margin-top: 1rem;
 }
 
@@ -245,12 +247,12 @@ img {
   margin: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   width: 240px;
-  height: 330px;
+  height: 495px;
 }
 
 .review-card img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 8px;
   object-fit: cover;
 }
