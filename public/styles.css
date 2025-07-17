@@ -279,7 +279,9 @@ img {
 .cta-section .btn {
   font-size: 1.1rem;
   padding: 1rem 2rem;
+  margin-top: 1rem; /* o ajustá el valor a gusto */
 }
+
 
 /* === Contacto === */
 .contact {
