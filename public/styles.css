@@ -186,16 +186,12 @@ img {
   padding: 1rem;
   width: 100%;
   max-width: 400px;
-  cursor: pointer;
-  transition: transform 0.2s;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-}
-
-.burger-card:hover {
-  transform: translateY(-5px);
+  height: 100%;
 }
 
 .burger-card img {
@@ -205,6 +201,10 @@ img {
   border-radius: 8px;
   margin-bottom: 0.75rem;
   display: block;
+}
+
+.burger-card .btn {
+  margin-top: auto;
 }
 
 /* === Sobre Nosotros === */
@@ -228,8 +228,8 @@ img {
 
 .review-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
   justify-items: center;
   margin-top: 1rem;
 }
@@ -241,16 +241,16 @@ img {
   justify-content: space-between;
   background: var(--card-bg);
   border-radius: 12px;
-  padding: 0.5rem;
+  padding: 0.75rem;
   margin: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  width: 160px;
-  height: 220px;
+  width: 200px;
+  height: 260px;
 }
 
 .review-card img {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -260,6 +260,23 @@ img {
   font-weight: bold;
   text-align: center;
   color: var(--text-color);
+}
+
+/* === Llamado a la acción === */
+.cta-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: var(--card-bg);
+}
+
+.cta-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section .btn {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
 }
 
 /* === Contacto === */
