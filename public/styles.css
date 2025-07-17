@@ -219,7 +219,7 @@ img {
 
 /* === Reseñas === */
 .reviews {
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem; /* reducido padding-bottom */
   background-color: var(--card-bg);
   text-align: center;
 }
@@ -282,7 +282,7 @@ img {
 
 /* === Contacto === */
 .contact {
-  padding: 2rem 1rem;
+  padding: 1rem 1rem 2rem 1rem; /* reducido padding-top */
   text-align: center;
 }
 
