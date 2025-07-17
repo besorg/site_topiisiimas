@@ -155,12 +155,14 @@ import Layout from '../layouts/Layout.astro';
           </div>
         `).join('');
 
+        /*
         // Reseñas
         const reviews = reviewsRows
           .filter(r => r.cita && r.autor)
           .map(r => `<div class="review"><p>“${r.cita.trim()}”</p><span>- ${r.autor.trim()}</span></div>`);
 
         document.getElementById('reviews-container').innerHTML = reviews.join('');
+*/
       }).catch(err => {
         console.error("Error cargando los datos:", err);
       });
