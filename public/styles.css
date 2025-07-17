@@ -266,10 +266,11 @@ img {
 
 /* === Llamado a la acción === */
 .cta-section {
-  padding: 3rem 1rem;
+  padding: 0rem 1rem 3rem 1rem;
   text-align: center;
   background-color: var(--card-bg);
 }
+
 
 .cta-section h3 {
   font-size: 1.6rem;
