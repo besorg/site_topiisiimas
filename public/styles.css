@@ -180,11 +180,18 @@ img {
 }
 
 .burger-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 880px; /* Ajustalo según tus textos e imagen */
+  text-align: center;
+  height: 850px; /* altura fija para todas */
 }
 
 .card-content {
@@ -193,38 +200,35 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  margin-bottom: 1rem; /* separa el contenido del botón */
 }
 
 
 .burger-card img {
   width: 100%;
-  height: 480px; /* altura fija */
+  height: 480px;
   object-fit: cover;
   border-radius: 8px;
-  display: block;
-  margin-bottom: 0;
-  line-height: 0;
+  margin-bottom: 0.5rem;
 }
 
 .burger-card h3 {
   font-size: 1.3rem;
-  margin: 0.5rem 0 0.5rem 0;
-  min-height: 3rem; /* asegura consistencia vertical */
+  margin: 0.5rem 0;
+  min-height: 3rem;
 }
 
 .burger-card p {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
-  flex-grow: 1; /* el texto ocupa el espacio restante */
-  display: flex;
-  align-items: flex-start; /* alinea arriba el texto */
   text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
 }
 
 .burger-card .btn {
-  margin-top: auto;
+  margin-top: 1rem;
   align-self: center;
 }
 
