@@ -24,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="about" id="about">
     <h2>Sobre Nosotros</h2>
-    <p>Somos Topísima, un espacio dedicado a la belleza y salud capilar. Ofrecemos tratamientos personalizados como botox capilar, alisado y shock de keratina, pensados para realzar tu estilo y cuidar tu cabello con productos de alta calidad y atención profesional.</p>
+    <p>Somos Topísimas, un espacio dedicado a la belleza y salud capilar. Ofrecemos tratamientos personalizados como corte, coloración, botox capilar, alisado y shock de keratina, pensados para realzar tu estilo y cuidar tu cabello con productos de alta calidad y atención profesional.</p>
   </section>
 
   <section class="reviews" id="reviews">
@@ -127,12 +127,12 @@ import Layout from '../layouts/Layout.astro';
 
         const whatsappButton = document.getElementById('whatsapp-button');
         if (whatsappButton && whatsapp) {
-          whatsappButton.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Estoy interesada en realizar un tratamiento capilar.")}`;
+          whatsappButton.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Quiero agendar un turno.")}`;
         }
 
         const whatsappLink = document.getElementById('wa-link');
         if (whatsappLink && whatsapp) {
-          whatsappLink.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Estoy interesada en realizar un tratamiento capilar.")}`;
+          whatsappLink.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Quiero agendar un turno.")}`;
         }
 
         const products = menuRows
@@ -152,7 +152,7 @@ list.innerHTML = products.map((product) => `
       <h3>${product.nombre}</h3>
       <p>${product.descripcion}</p>
     </div>
-    <a class="btn" href="https://wa.me/5491165565637?text=${encodeURIComponent('¡Hola! Me interesa el tratamiento: ' + product.nombre)}" target="_blank">Reservar</a>
+    <a class="btn" href="https://wa.me/5491165565637?text=${encodeURIComponent('¡Hola! Quisiera + ' + product.nombre)}" target="_blank">Reservar</a>
   </div>
 `).join('');
 
