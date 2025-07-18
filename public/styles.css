@@ -172,6 +172,30 @@ img {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+  .burger-card {
+    min-height: auto;
+    height: auto;
+  }
+
+  .burger-card img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .burger-card h3,
+  .burger-card p,
+  .burger-card .btn {
+    margin-bottom: 0.5rem;
+  }
+
+  .burger-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
 .burger-list {
   display: flex;
   flex-wrap: wrap;
