@@ -152,7 +152,7 @@ list.innerHTML = products.map((product) => `
       <h3>${product.nombre}</h3>
       <p>${product.descripcion}</p>
     </div>
-    <a class="btn" href="https://wa.me/5491165565637?text=${encodeURIComponent('¡Hola! Quisiera + ' + product.nombre)}" target="_blank">Reservar</a>
+    <a class="btn" href="https://wa.me/5491165565637?text=${encodeURIComponent('¡Hola! Quisiera ' + product.nombre)}" target="_blank">Reservar</a>
   </div>
 `).join('');
 
