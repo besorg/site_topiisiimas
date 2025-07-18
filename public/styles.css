@@ -189,7 +189,7 @@ img {
   padding: 1rem;
   max-width: 400px;
   width: 100%;
-  height: 750px; /* altura fija uniforme para todas */
+  height: 870px; /* altura fija uniforme para todas */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
