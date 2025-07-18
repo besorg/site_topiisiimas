@@ -189,7 +189,7 @@ img {
   padding: 1rem;
   max-width: 400px;
   width: 100%;
-  height: 840px; /* altura fija uniforme para todas */
+  height: 820px; /* altura fija uniforme para todas */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -235,7 +235,7 @@ img {
 }
 
 .burger-card .btn {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   align-self: center;
 }
 
