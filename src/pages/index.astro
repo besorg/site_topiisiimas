@@ -143,8 +143,8 @@ import Layout from '../layouts/Layout.astro';
         window.dynamicProducts = products;
 
 const list = document.getElementById('burger-list');
-list.innerHTML = products.map((product) => `
-  <div class="burger-card">
+list.innerHTML = products.map((product, index) => `
+  <div class="burger-card" onclick="window.openModalFromList(${index})">
     <img src="${product.imagen}" alt="${product.nombre}" />
     <div class="card-content">
       <h3>${product.nombre}</h3>
