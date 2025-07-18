@@ -191,7 +191,7 @@ img {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  height: 890px; /* altura fija para todas */
+  height: 1050px; /* altura fija para todas */
 }
 
 .card-content {
