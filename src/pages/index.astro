@@ -37,6 +37,7 @@ import Layout from '../layouts/Layout.astro';
     <a class="btn" href="https://wa.me/5491165565637?text=¡Hola! Quiero agendar un turno para un tratamiento capilar." target="_blank">Agendar por WhatsApp</a>
   </section>
 
+  <!--
   <div id="burger-modal" class="modal hidden">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
@@ -64,6 +65,7 @@ import Layout from '../layouts/Layout.astro';
       </form>
     </div>
   </div>
+  -->
 
   <section class="contact" id="contact">
     <h2>Contacto</h2>
@@ -142,9 +144,10 @@ import Layout from '../layouts/Layout.astro';
           }));
         window.dynamicProducts = products;
 
+
 const list = document.getElementById('burger-list');
-list.innerHTML = products.map((product, index) => `
-  <div class="burger-card" onclick="window.openModalFromList(${index})">
+list.innerHTML = products.map((product) => `
+  <div class="burger-card">
     <img src="${product.imagen}" alt="${product.nombre}" />
     <div class="card-content">
       <h3>${product.nombre}</h3>
