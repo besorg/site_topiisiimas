@@ -191,7 +191,7 @@ img {
   justify-content: flex-start; /* importante */
   align-items: center;
   text-align: center;
-  height: 840px; /* altura fija */
+  height: 900px; /* altura fija */
 }
 
 .burger-card img {
