@@ -144,15 +144,17 @@ import Layout from '../layouts/Layout.astro';
           }));
         window.dynamicProducts = products;
 
-        const list = document.getElementById('burger-list');
-        list.innerHTML = products.map((product) => `
-          <div class="burger-card">
-            <img src="${product.imagen}" alt="${product.nombre}" />
-            <h3>${product.nombre}</h3>
-            <p>${product.descripcion}</p>
-            <a class="btn" href="https://wa.me/5491165565637?text=${encodeURIComponent('¡Hola! Me interesa el tratamiento: ' + product.nombre)}" target="_blank">Reservar</a>
-          </div>
-        `).join('');
+const list = document.getElementById('burger-list');
+list.innerHTML = products.map((product) => `
+  <div class="burger-card">
+    <img src="${product.imagen}" alt="${product.nombre}" />
+    <div class="card-content">
+      <h3>${product.nombre}</h3>
+      <p>${product.descripcion}</p>
+    </div>
+    <a class="btn" href="https://wa.me/5491165565637?text=${encodeURIComponent('¡Hola! Me interesa el tratamiento: ' + product.nombre)}" target="_blank">Reservar</a>
+  </div>
+`).join('');
 
         const reviews = reviewsRows
   .filter(r => r.cita)
